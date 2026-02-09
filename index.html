@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Firewall Breach</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: url("./background.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* dark overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* glass box */
+.container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 60px 80px;
+  border-radius: 18px;
+  background: rgba(10, 20, 40, 0.55);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.35);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  color: #e0ffff;
+}
+
+/* welcome */
+.welcome {
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #7df9ff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 12px #00ffff;
+}
+
+/* main title */
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+  text-shadow: 0 0 25px cyan;
+}
+
+/* tagline */
+.tagline {
+  font-size: 18px;
+  margin-bottom: 35px;
+  color: #bffcff;
+}
+
+/* buttons */
+.roles {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.btn {
+  padding: 16px 48px;
+  font-size: 18px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s ease;
+}
+
+/* hacker */
+.hacker {
+  background: linear-gradient(135deg, #ff0055, #ff4d88);
+  box-shadow: 0 0 25px #ff0055;
+}
+
+/* handler */
+.handler {
+  background: linear-gradient(135deg, #2563eb, #22d3ee);
+  box-shadow: 0 0 25px #22d3ee;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* status */
+.status {
+  margin-top: 10px;
+  color: #00ffcc;
+  font-size: 16px;
+  text-shadow: 0 0 12px #00ffcc;
+}
+
+/* subtle pulse */
+@keyframes pulse {
+  0% { box-shadow: 0 0 25px rgba(0,255,255,0.3); }
+  50% { box-shadow: 0 0 45px rgba(0,255,255,0.6); }
+  100% { box-shadow: 0 0 25px rgba(0,255,255,0.3); }
+}
+
+.container {
+  animation: pulse 3s infinite;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+  <div class="welcome">WELCOME OPERATIVE</div>
+  <div class="title">FIREWALL BREACH</div>
+  <div class="tagline">Get ready to breach the system. Select your role.</div>
+
+  <div class="roles">
+    <button class="btn hacker">🧑‍💻 Hacker</button>
+    <button class="btn handler">🛡️ Handler</button>
+  </div>
+
+  <div class="status">
+    Handler selected. Waiting for Hacker...
+  </div>
+</div>
+
+</body>
+</html>
